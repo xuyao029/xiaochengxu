@@ -4,12 +4,12 @@
     "pages/category/category",
     "pages/cart/cart",
     "pages/profile/profile",
-    "pages/logs/logs"
+    "components/w-goods/w-goods",
+    "components/w-goods-item/w-goods-item"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#ff5777",
-    "navigationBarTitleText": "购物街",
     "navigationBarTextStyle": "white",
     "backgroundColor": "#FF6100",
     "enablePullDownRefresh": false
@@ -17,31 +17,31 @@
   "tabBar": {
     "selectedColor": "#ff5777",
     "list": [
-    {
-      "pagePath": "pages/index/index",
-      "text": "首页",
-      "iconPath": "assets/tabbar/home.png",
-      "selectedIconPath": "assets/tabbar/home_active.png"
-    },
-    {
-      "pagePath": "pages/category/category",
-      "text": "分类",
-      "iconPath": "assets/tabbar/category.png",
-      "selectedIconPath": "assets/tabbar/category_active.png"
-    },
-    {
-      "pagePath": "pages/cart/cart",
-      "text": "购物车",
-      "iconPath": "assets/tabbar/cart.png",
-      "selectedIconPath": "assets/tabbar/cart_active.png"
-    },
-    {
-      "pagePath": "pages/profile/profile",
-      "text": "个人",
-      "iconPath": "assets/tabbar/profile.png",
-      "selectedIconPath": "assets/tabbar/profile_active.png"
-    }
-  ]
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "assets/tabbar/home.png",
+        "selectedIconPath": "assets/tabbar/home_active.png"
+      },
+      {
+        "pagePath": "pages/category/category",
+        "text": "分类",
+        "iconPath": "assets/tabbar/category.png",
+        "selectedIconPath": "assets/tabbar/category_active.png"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "text": "购物车",
+        "iconPath": "assets/tabbar/cart.png",
+        "selectedIconPath": "assets/tabbar/cart_active.png"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "个人",
+        "iconPath": "assets/tabbar/profile.png",
+        "selectedIconPath": "assets/tabbar/profile_active.png"
+      }
+    ]
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json",

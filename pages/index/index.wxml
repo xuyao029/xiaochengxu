@@ -1,17 +1,23 @@
 <!--index.wxml-->
-<!-- <view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+<view class='home'>
+  <view hidden='{{!showTabControl}}'>
+    <w-tab-control class='tab-control-temp' 
+                 titles="{{titles}}" 
+                 bind:tabclick="tabClick"/>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
-  <button size='mini'>按钮</button>
-</view> -->
-
-<w-tab-control titles="{{['流行','新款','精选']}}"/>
+<scroll-view class='content' 
+              scroll-y
+              bindscrolltolower="loadMore"
+              scroll-top="{{topPosition}}"
+              bindscroll="scrollPosition">
+<w-swiper list="{{banners}}"/>
+<w-recommend recommends="{{recommends}}" bind:imageLoad="onImageLoad"/>
+<view class="popular">
+  <image src="/assets/home/recommend_bg.jpg" class="img" mode="widthFix"/>
+</view>
+<w-tab-control class='tab-control' titles="{{titles}}" bind:tabclick="tabClick"/>
+<w-goods goodslist="{{goods[currentType].list}}"/>
+<w-back-top bindtap="onBackTop" wx:if="{{showBackTop}}"/>
+  </scroll-view> 
+</view>  
 
